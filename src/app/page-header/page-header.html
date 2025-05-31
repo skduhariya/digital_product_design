@@ -1,0 +1,40 @@
+<header id="header" class="header">
+  <!-- Logo -->
+  <div class="logo">
+    <a href="#">
+      <img
+        src="./../../../assests/logo.svg"
+        alt="Abstract white logo with overlapping shapes and the text Digital Product Design on a transparent background, modern and professional tone"
+      />
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav" class="nav">
+    <!-- Nav opener for mobile burger menu -->
+    <a href="#" class="nav__opener"
+      ><span class="icon-menu" (click)="toggleNav($event)"></span
+    ></a>
+    <!-- Nav menu holder -->
+    <div class="nav__holder">
+      <!-- Nav closer for mobile burger menu -->
+      <a
+        href="#"
+        class="nav__opener nav__opener--close"
+        (click)="toggleNav($event)"
+        ><span class="icon-close"></span
+      ></a>
+      <ul class="nav__menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Your benefits</a></li>
+        <li><a href="#">Our process</a></li>
+        <li><a href="#">Our works</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Start a project</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Button -->
+  <a href="#" class="btn header__btn">Get Started</a>
+</header>

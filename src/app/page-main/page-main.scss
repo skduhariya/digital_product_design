@@ -1,0 +1,269 @@
+/* Generic container styles */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* design container width is 1170px. So, with the left/right spacing of 20px, 
+      the container box-model width becomes 1210px.
+      So, we are setting max-width to 1210px, which makes the container responsive because of the max-width property. 
+    */
+    max-width: 1210px;
+}
+
+/* Hero section styles */
+.hero-section {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.hero-section__decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 100px;
+    z-index: -1;
+}
+
+.hero-section__decor img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.hero-section__info {
+    text-align: center;
+    margin-bottom: 20px;
+    h1,p{
+        color: var(--color-white);
+    }
+}
+
+.hero-section__image {
+    position: relative;
+    margin-bottom: -100px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tablet device and up */
+@media (min-width: 768px) {
+    /* For hero section we followed mobile styles */
+}
+
+/* Desktop small device and up */
+
+/* For Desktop and up we updated the header and menu to match design layout */
+@media (min-width: 1024px) {
+    
+
+    /* hero section styles */
+    .hero-section {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    .hero-section__decor {
+        bottom: 180px;
+    }
+
+    .hero-section h1 {
+        font-size: 48px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .hero-section__info {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .hero-section__image {
+        margin-bottom: -200px;
+        max-width: 800px;
+    }
+}
+
+/* Desktop large device and up */
+@media (min-width: 1200px) {
+    
+
+    /* hero section styles */
+    .hero-section {
+        padding-top: 150px;
+        padding-bottom: 250px;
+    }
+
+    .hero-section__decor {
+        bottom: 280px;
+    }
+
+    .hero-section__image {
+        margin-bottom: -300px;
+        max-width: 1230px;
+    }
+
+    .hero-section h1 {
+        font-size: 68px;
+    }
+
+    .hero-section__info {
+        font-size: 20px;
+    }
+
+    .hero-section__info p {
+        margin-bottom: 40px;
+    }
+}
+
+
+/* Services Section styles */
+.services-section {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 50px;
+}
+
+.services-section__decor-img {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    z-index: -1;
+    width: 200px;
+}
+
+.services-section__decor-img:last-child {
+    left: auto;
+    right: 0;
+    bottom: auto;
+    top: 0;
+}
+
+.services-section__intro {
+    margin-bottom: 30px;
+}
+
+.services-section__column {
+    margin-bottom: 25px;
+}
+
+/* Tablet device and up */
+@media (min-width: 768px) {
+    .services-section__intro {
+        max-width: 50%;
+    }
+
+    .services-section__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .services-section__column {
+        width: 50%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .services-section__decor-img {
+        width: 300px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .services-section__column {
+        width: 33.33%;
+    }
+
+    .services-section {
+        padding-bottom: 100px;
+    }
+
+    .services-section__decor-img {
+        width: 500px;
+    }
+
+    .services-section__decor-img:last-child {
+        width: 700px;
+    }
+}
+
+/* General styles for reusable component info-card */
+.info-card {
+    display: block;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px 0 #3b3e430d;
+    background: var(--color-white);
+    padding: 15px;
+}
+
+.info-card h3 {
+    margin-bottom: 15px;
+}
+
+.info-card p strong {
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .info-card {
+        padding: 25px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .info-card {
+        padding: 45px 40px;
+    }
+}
+
+/* General styles for reusable component icon-box */
+.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background: var(--color-orange-300);
+    color: var(--color-orange-600);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.icon-box--soft-green {
+    background: var(--color-green-300);
+    color: var(--color-green-500);
+}
+
+.icon-box--yellow {
+    background: var(--color-yellow-300);
+    color: var(--color-yellow-400);
+}
+
+.icon-box--bright-green {
+    background: var(--color-green-400);
+    color: var(--color-green-600);
+}
+
+.icon-box--purple {
+    background: var(--color-purple-300);
+    color: var(--color-purple-600);
+}
+
+.icon-box--blue {
+    background: var(--color-blue-300);
+    color: var(--color-blue-600);
+}

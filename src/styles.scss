@@ -1,1 +1,220 @@
 /* You can add global styles to this file, and also import other style files */
+/* General browser CSS and base styles */
+
+/**
+ * Set up a decent box model on the root element
+ */
+
+ /* CSS variables */
+:root {
+    --color-white: #ffffff;
+    --color-white-300: rgba(255, 255, 255, 0.3);
+    --color-white-800: rgba(255, 255, 255, 0.8);
+    --color-black: #000000;
+    --color-primary: #595e64;
+    --color-secondary: #3b3e43;
+    --color-brand: #57b3fe;
+    --color-highlight: #00a077;
+    --color-dark: #0d0d0d;
+    --color-orange-300: #ffe7db;
+    --color-orange-600: #fead86;
+    --color-green-300: #e7f2ef;
+    --color-green-400: #c0f2ef;
+    --color-green-500: #51a690;
+    --color-green-600: #00a198;
+    --color-yellow-300: #faf3d8;
+    --color-yellow-400: #ffcf00;
+    --color-purple-300: #ede7f2;
+    --color-purple-600: #75578e;
+    --color-blue-300: #d8f0fa;
+    --color-blue-600: #0985b9;
+    --font-dm-sans: "DM Sans", "Arial", "Helvetica", sans-serif;
+    --font-nunito: "Nunito", "Arial", "Helvetica", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+/**
+   * Make all elements from the DOM inherit from the parent box-sizing
+   * Since `*` has a specificity of 0, it does not override the `html` value
+   * making all elements inheriting from the root box-sizing value
+   * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+   */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* body has default margin */
+body {
+    margin: 0;
+}
+
+/* h1-h6 has default margin top/bottom */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 20px;
+    font-family: var(--font-dm-sans);
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+/* p tag has default margin top/bottom */
+p {
+    margin: 0 0 20px;
+}
+
+/* ul/ol has default margin, padding, and list style like bullets */
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* anchor tag has default decoration underline */
+a {
+    text-decoration: none;
+}
+
+/* Responsive image property */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 
+  Page wrapper styles:
+  This style will not let any elements overflow from the page wrapper 
+  */
+#page-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Typography */
+/* Typography */
+body {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: var(--color-primary);
+}
+
+/* Icomoon font styles */
+@font-face {
+    font-family: "icomoon";
+    src: url("/fonts/icomoon.ttf?z8q1or") format("truetype"),
+        url("/fonts/icomoon.woff?z8q1or") format("woff"),
+        url("/fonts/icomoon.svg?z8q1or#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-clear:before {
+    content: "\e900";
+}
+
+.icon-close:before {
+    content: "\ea0f";
+}
+
+.icon-menu:before {
+    content: "\e901";
+}
+
+.icon-instagram:before {
+    content: "\e902";
+}
+
+.icon-twitter:before {
+    content: "\e903";
+}
+
+.icon-facebook:before {
+    content: "\e904";
+}
+
+.icon-bag:before {
+    content: "\e900";
+}
+
+.icon-graph:before {
+    content: "\e903";
+}
+
+.icon-search:before {
+    content: "\e904";
+}
+
+.icon-users:before {
+    content: "\e905";
+}
+
+.icon-chart:before {
+    content: "\e901";
+}
+
+.icon-discount:before {
+    content: "\e902";
+}
+
+/* Generic Button styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 15px;
+    background: var(--color-white);
+    color: var(--color-brand);
+    font-family: var(--font-dm-sans);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 21px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: color, background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--color-secondary);
+    color: var(--color-white);
+}
+
+/* Generic styles for text-highlight */
+.text-highlight {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: var(--font-dm-sans);
+    color: var(--color-highlight);
+    margin-bottom: 25px;
+    font-size: 12px;
+    line-height: 1.3;
+}

@@ -1,0 +1,62 @@
+<main id="main" class="main">
+  <!-- Hero Section -->
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Hero Section decorative image -->
+    <div class="hero-section__decor">
+      <img src="./../../../assests/hero-decor.png" alt="Decor" />
+    </div>
+    <!-- Generic page container -->
+    <div class="container">
+      <!-- Hero Section info -->
+      <div class="hero-section__info">
+        <h1>A Digital Product Design Agency</h1>
+        <p>We are Creative and Professional Digital Agency</p>
+        <a href="#" class="btn">Get Started</a>
+      </div>
+      <!-- Hero Section image -->
+      <div class="hero-section__image">
+        <img src="./../../../assests/hero-img.png" alt="Hero Image" />
+      </div>
+    </div>
+  </section>
+  <!-- Services Section -->
+  <section class="services-section">
+    <!-- Generic page container -->
+    <div class="container">
+      <!-- Services Section Intro -->
+      <div class="services-section__intro">
+        <!-- Reusable text-highlight component -->
+        <strong class="text-highlight">features</strong>
+        <h2>We are here to help you with</h2>
+      </div>
+      <!-- Services Section Row -->
+      <div class="services-section__row">
+        <!-- Service Section Column -->
+        <div class="services-section__column" *ngFor="let feature of features">
+          <article class="info-card">
+            <!-- Reusable Icon Box -->
+            <div class="icon-box" [ngClass]=feature?.iconBoxClass>
+              <!-- Font icon element -->
+              <span [ngClass]=feature?.icon></span>
+            </div>
+            <h3>{{feature.title}}</h3>
+            <p>{{feature.description}}</p>
+          </article>
+        </div>
+      </div>
+    </div>
+    <!-- Services Section decorative images -->
+    <div class="services-section__decor">
+      <div class="services-section__decor-img">
+        <img src="./../../../assests/services-decor-left.png" alt="Decor" />
+      </div>
+      <div class="services-section__decor-img">
+        <img src="./../../../assests/services-decor-right.png" alt="Decor" />
+      </div>
+    </div>
+  </section>
+  <!-- Process Section -->
+  <!-- Brands Section -->
+  <!-- Contact Section -->
+</main>
